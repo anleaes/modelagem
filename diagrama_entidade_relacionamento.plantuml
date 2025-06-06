@@ -1,0 +1,35 @@
+@startuml
+
+entity Autor{
+id: NUMBER <<PK>>
+nome: VARCHAR2
+idade: NUMBER
+}
+
+entity Livro{
+id: NUMBER  <<PK>>
+titulo: VARCHAR2
+data_lancamento: DATE
+id_autor: NUMBER <<FK>>
+}
+
+entity Emprestimo{
+id: NUMBER  <<PK>>
+data_retirada: DATE
+data_devolucao: DATE
+id_pessoa: NUMBER <<FK>>
+id_livro: NUMBER <<FK>>
+}
+
+entity Pessoa{
+id: NUMBER  <<PK>>
+nome: VARCHAR2
+cpf: NUMBER
+}
+
+Autor }|--|| Livro
+Pessoa ||--|{ Emprestimo
+Livro ||--|{ Emprestimo
+
+@enduml
+

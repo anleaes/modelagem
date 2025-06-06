@@ -1,0 +1,43 @@
+@startuml
+
+class Autor{
+-nome: VARCHAR2
+-idade: NUMBER
++construtor()
++gettersSetters()
++toString()
+}
+
+class Livro{
+-titulo: VARCHAR2
+-data_lancamento: DATE
+-autor: Autor
++construtor()
++gettersSetters()
++toString()
+}
+
+class Emprestimo{
+-data_retirada: DATE
+-data_devolucao: DATE
+-pessoa: Pessoa
+-livro: Livro
++construtor()
++gettersSetters()
++toString()
+}
+
+class Pessoa{
+-nome: VARCHAR2
+-cpf: NUMBER
++construtor()
++gettersSetters()
++toString()
+}
+
+Autor o--> Livro
+Pessoa o--> Emprestimo
+Livro o--> Emprestimo
+
+@enduml
+
