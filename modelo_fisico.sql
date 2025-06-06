@@ -104,3 +104,11 @@ BEFORE INSERT ON emprestimo FOR EACH ROW
 BEGIN
 :NEW.id := emprestimo_seq.NEXTVAL;
 END;
+
+--
+
+CREATE TABLE teste(
+id     	 	 NUMBER(10) NOT NULL,
+nome   	     VARCHAR2(100) NOT NULL,
+idade   	 NUMBER(10) NOT NULL
+);
