@@ -11,3 +11,5 @@ WHERE autor.id = livro.id_autor
 AND   livro.id = emprestimo.id_livro
 AND   emprestimo.id_pessoa = pessoa.id;
 
+SELECT * FROM pessoa;
+
